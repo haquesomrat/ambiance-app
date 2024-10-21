@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   title: "About",
 };
 
-export const revalidate = 10;
+// revalidate after every 10 seconds
+// export const revalidate = 10;
 
 export type TAbout = {
   _id: string;
@@ -35,7 +36,7 @@ async function Page() {
     return <Loading />;
   }
 
-  console.log(aboutData);
+  // console.log(aboutData);
 
   return (
     <div className="container">
