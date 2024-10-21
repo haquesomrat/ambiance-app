@@ -10,9 +10,6 @@ export const metadata: Metadata = {
   title: "About",
 };
 
-// revalidate after every 10 seconds
-// export const revalidate = 10;
-
 export type TAbout = {
   _id: string;
   bio: null | string;
@@ -32,6 +29,8 @@ async function Page() {
     const response = await getAboutData();
     aboutData = (await response.data) as TAbout;
   } catch (error) {}
+
+  // fallback
   if (!aboutData) {
     return <Loading />;
   }
