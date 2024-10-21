@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "About",
 };
 
+export const revalidate = 10;
+
 export type TAbout = {
   _id: string;
   bio: null | string;
