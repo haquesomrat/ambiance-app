@@ -9,7 +9,7 @@ export const getAboutData = async () => {
   try {
     const response = await axios.get(`/user/about-user`, {
       headers: {
-        "Cache-Control": "no-cache",
+        "Cache-Control": "no-store",
         Pragma: "no-cache",
         Expires: "0",
       },
